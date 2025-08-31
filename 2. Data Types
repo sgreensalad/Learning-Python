@@ -1,0 +1,159 @@
+#%%
+type(-12+100)
+#%%
+type(12+10.25)
+#%%
+type(12+3j)
+#j is the only letter that will work for imaginary numbers
+#%%
+# Boolean - either true or false
+
+type(1>5)
+#%%
+1>5
+#%%
+# Strings
+'Single quote'
+#%%
+"Double quote"
+#%%
+""
+#%%
+
+#%%
+multiline = ""
+#%%
+multiline = ""
+#%%
+multiline =
+          """He wrote a little poem
+          It went over several lines
+          To show how the text appears"""
+#%%
+multiline = """
+The ice cream vanquished
+my longing for sweets,
+upon this diet I look away,
+it longer exists on this day.
+"""
+#%%
+print(multiline)
+#%%
+multiline = """
+Ok so the triple quotes
+need to be on their own lines.
+Is that correct?
+"""
+#%%
+print(multiline)
+#%%
+#If want to use ' or " within the string then need to use triple quotes.
+#%%
+a = "Hello World"
+#%%
+print(a[:5])
+#%%
+# the "[:5] gives us all of the characters of the string up to e.g. 5
+#%%
+print(a[2:5])
+
+# this gives us the characters in positions 2 - 5. Indexing starts at 0 so llo is 2-5 not 3-6.
+#%%
+# List
+# the square brackets is what makes a list a list
+[1, 2, 3]
+#%%
+["cookie dough", "strawberry", "chocolate"]
+#%%
+["vanilla", 3, ["scoops", "spoon" ], True]
+
+# the 't' in True HAS to be a capital letter. Error otherwise
+#%%
+ice_cream = ["cookie dough", "strawberry", "chocolate"]
+ice_cream.append("salted caramel")
+
+ice_cream
+#%%
+ice_cream[0] = "butter pecan"
+ice_cream
+
+# this changes the list item at position 0  so cookie dough --> butter pecan
+#%%
+nested_list = ["vanilla", 3, ["scoops", "spoon" ], True]
+#%%
+nested_list[2]
+#%%
+nested_list[2] [1]
+#%%
+#Tuple - stores data but cannot be altered
+#%%
+tuple_scoops = (1, 2, 3, 2, 1)
+#%%
+tuple_scoops[0]
+#%%
+tuple_scoops.append(3)
+#does not work because cannot change or add anything to a tuple
+#used when data never going to change but less popular than lists
+#%%
+# Sets
+
+daily_pints = {1,2,3}
+#%%
+type(daily_pints)
+#%%
+print(daily_pints)
+#%%
+daily_pints_log = {1,2,41,2,3,5, 6, 3,2}
+print(daily_pints_log)
+#%%
+# prints only unique values
+#%%
+wifes_daily_pints_log = {1, 3, 4,5, 73, 41}
+#%%
+print(daily_pints_log | wifes_daily_pints_log)
+#%%
+#shows all unique vales in combined set
+#%%
+print(daily_pints_log & wifes_daily_pints_log)
+#%%
+# shows unique values that both sets have in common
+#%%
+print(daily_pints_log - wifes_daily_pints_log)
+#%%
+# shows all of the numbers that ARE in daily but NOT in wife's daily
+#%%
+print(wifes_daily_pints_log ^ daily_pints_log)
+#%%
+# shows values that are in 1 or other but not in both
+#%%
+
+#%%
+# Dictionaries
+#Key/Value pair
+
+dict_cream = {"name":"Alex Freburg", "weekly intake":5, "favourite ice creams":["mint choc chip", "chocolate"]}
+
+print(dict_cream)
+#%%
+dict_cream.values()
+#%%
+dict_cream.keys()
+#%%
+dict_cream.items()
+#%%
+# cannot index like with a list. Need to call item by key e.g.
+
+dict_cream["name"]
+#%%
+#can update dictionaries
+
+dict_cream.update({"name":"Christine Freburg", "weekly intake":5, "weight":300})
+
+print(dict_cream)
+#%%
+#to delete key value
+
+del dict_cream["weight"]
+
+print(dict_cream)
+#%%
